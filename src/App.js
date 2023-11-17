@@ -45,13 +45,15 @@ function App() {
   const Describe = () => {
     return (
     <div>
-      <h1>Describe image</h1>
+      <h1>Computer vision</h1>
       {!processing &&
         <div>
           <div>
-            <label>URL</label>
-            <input type="text" placeholder="Enter an image URL" size="50" onChange={handleChange}></input>
-          <button onClick={onFileUrlEntered}>Describe</button>
+            <label>URL: </label>
+            <input type="text" placeholder="Ingrese la URL de la imagen" size="50" onChange={handleChange}></input>
+            <div>
+              <button onClick={onFileUrlEntered}>Analizar</button>
+            </div>
           </div>
         </div>
       }

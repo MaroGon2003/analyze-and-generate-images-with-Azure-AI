@@ -24,20 +24,20 @@ export const computerVision = async (url) => {
     // describe image using the describeImage method
     const analysis = await computerVisionClient.describeImage(url, options)
     .then((result) => {
-        console.log("The result is:");
+        console.log("El resultado es:");
         console.log(result);
         return { "URL": url, ...result};
       })
       .catch((err) => {
-        console.log("An error occurred:");
+        console.log("Ocurrio un error: ");
         console.error(err);
-        alert(err + "Upload an image with a smaller size");
+        alert(err + "Sube una imagen con un tamaño más pequeño");
       });
 
     // all information about image
-    console.log("This is:" +analysis);
+    console.log("Esto es: " +analysis);
     if(analysis === undefined){
-        return "There is something wrong with the image"
+        return "Hay algo mal con la imagen"
     }
     return { "URL": url, ...analysis};
 }
