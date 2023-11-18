@@ -14,6 +14,14 @@ const options = {
     language: "es"
   };
 
+  export const isConfigured = () => {
+    const result = (key && endpoint && (key.length > 0) && (endpoint.length > 0)) ? true : false;
+    console.log(`key = ${key}`)
+    console.log(`endpoint = ${endpoint}`)
+    console.log(`ComputerVision isConfigured = ${result}`)
+    return result;
+}
+
 // Describe Image from URL
 export const computerVision = async (url) => {
 
